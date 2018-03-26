@@ -23,7 +23,7 @@ def tpl(name="sorry"):
 def tplmake(name="sorry"):
     if request.method == 'POST':
         a = request.get_data()
-        dict1 = json.loads(a)
+        dict1 = json.loads(a.decode("utf-8"))
 
         sentences = list(dict1.keys())
         for k, v in dict1.items():
